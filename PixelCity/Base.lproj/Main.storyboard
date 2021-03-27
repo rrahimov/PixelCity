@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,21 +11,87 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapVC" customModule="PixelCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="shC-Fo-qMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="WLj-m3-OWe"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e02-TU-leh">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXh-LB-o49">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double tap to drop a pin and view photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oO-me-OB0">
+                                        <rect key="frame" x="14" y="52" width="400" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="TFk-DJ-wTL"/>
+                                            <constraint firstAttribute="height" constant="20" id="Yoi-GZ-MxM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="9oO-me-OB0" firstAttribute="centerY" secondItem="CXh-LB-o49" secondAttribute="centerY" constant="12" id="Jax-a0-4Gd"/>
+                                    <constraint firstAttribute="height" constant="100" id="cxf-ag-yST"/>
+                                    <constraint firstItem="9oO-me-OB0" firstAttribute="centerX" secondItem="CXh-LB-o49" secondAttribute="centerX" id="j04-EF-WbP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxH-2K-KZI">
+                                <rect key="frame" x="358" y="842" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cgB-Cj-okB"/>
+                                    <constraint firstAttribute="height" constant="50" id="gmc-A3-FaM"/>
+                                </constraints>
+                                <state key="normal" image="locationButton"/>
+                                <connections>
+                                    <action selector="centerMapBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ub8-UU-kpq"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r5-S5-oZj">
+                                <rect key="frame" x="0.0" y="926" width="428" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e02-TU-leh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="04g-7o-Xyw"/>
+                            <constraint firstItem="WLj-m3-OWe" firstAttribute="top" secondItem="HxH-2K-KZI" secondAttribute="bottom" id="4JM-rY-NXf"/>
+                            <constraint firstAttribute="trailing" secondItem="6r5-S5-oZj" secondAttribute="trailing" id="7RY-oN-HK9"/>
+                            <constraint firstItem="CXh-LB-o49" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="DlF-Tw-W20"/>
+                            <constraint firstAttribute="bottom" secondItem="e02-TU-leh" secondAttribute="bottom" id="FCY-7P-IPz"/>
+                            <constraint firstItem="e02-TU-leh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gh6-qp-W0u"/>
+                            <constraint firstItem="6r5-S5-oZj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MGM-Tj-JA6"/>
+                            <constraint firstAttribute="bottom" secondItem="6r5-S5-oZj" secondAttribute="bottom" id="XVZ-wz-Sfr"/>
+                            <constraint firstItem="6r5-S5-oZj" firstAttribute="top" secondItem="e02-TU-leh" secondAttribute="bottom" id="ZaA-42-mcr"/>
+                            <constraint firstItem="e02-TU-leh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bid-st-oau"/>
+                            <constraint firstItem="CXh-LB-o49" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cMD-EY-QSP"/>
+                            <constraint firstItem="HxH-2K-KZI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="v9H-6a-tWb"/>
+                            <constraint firstItem="CXh-LB-o49" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vm4-7G-pY9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="e02-TU-leh" id="x90-mQ-D2f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="77"/>
+            <point key="canvasLocation" x="53.271028037383175" y="75.809935205183592"/>
         </scene>
     </scenes>
     <resources>
+        <image name="locationButton" width="67" height="67"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
