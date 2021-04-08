@@ -3,21 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9036F1732610319700611191 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036F1722610319700611191 /* DroppablePin.swift */; };
 		90535898260E50D500CAFB0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90535897260E50D500CAFB0D /* AppDelegate.swift */; };
 		9053589A260E50D500CAFB0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90535899260E50D500CAFB0D /* SceneDelegate.swift */; };
 		9053589C260E50D500CAFB0D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053589B260E50D500CAFB0D /* MapVC.swift */; };
 		9053589F260E50D500CAFB0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9053589D260E50D500CAFB0D /* Main.storyboard */; };
 		905358A1260E50D800CAFB0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 905358A0260E50D800CAFB0D /* Assets.xcassets */; };
 		905358A4260E50D800CAFB0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905358A2260E50D800CAFB0D /* LaunchScreen.storyboard */; };
+		90637557261C91DD00503031 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90637556261C91DD00503031 /* PopVC.swift */; };
+		90C0461D26187BD800F92099 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0461C26187BD800F92099 /* PhotoCell.swift */; };
+		90C046202618852F00F92099 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0461F2618852F00F92099 /* Constants.swift */; };
 		AED329FCC9E9C1CC58C2A2AB /* Pods_PixelCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A095381A242A53B936EB36A /* Pods_PixelCity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37576A2739CC261DE824A114 /* Pods-PixelCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelCity.debug.xcconfig"; path = "Target Support Files/Pods-PixelCity/Pods-PixelCity.debug.xcconfig"; sourceTree = "<group>"; };
+		9036F1722610319700611191 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		90535894260E50D500CAFB0D /* PixelCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90535897260E50D500CAFB0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90535899260E50D500CAFB0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		905358A0260E50D800CAFB0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		905358A3260E50D800CAFB0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		905358A5260E50D800CAFB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90637556261C91DD00503031 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
+		90C0461C26187BD800F92099 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		90C0461F2618852F00F92099 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9705E05CE9629457AFAD2F73 /* Pods-PixelCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelCity.release.xcconfig"; path = "Target Support Files/Pods-PixelCity/Pods-PixelCity.release.xcconfig"; sourceTree = "<group>"; };
 		9A095381A242A53B936EB36A /* Pods_PixelCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,7 +56,6 @@
 				37576A2739CC261DE824A114 /* Pods-PixelCity.debug.xcconfig */,
 				9705E05CE9629457AFAD2F73 /* Pods-PixelCity.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				9053589B260E50D500CAFB0D /* MapVC.swift */,
+				90637556261C91DD00503031 /* PopVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +114,8 @@
 		905358AD260E512300CAFB0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9036F1722610319700611191 /* DroppablePin.swift */,
+				90C0461C26187BD800F92099 /* PhotoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +130,7 @@
 		905358AF260E514800CAFB0D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				90C0461F2618852F00F92099 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -239,8 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9053589C260E50D500CAFB0D /* MapVC.swift in Sources */,
+				90C0461D26187BD800F92099 /* PhotoCell.swift in Sources */,
+				90637557261C91DD00503031 /* PopVC.swift in Sources */,
+				9036F1732610319700611191 /* DroppablePin.swift in Sources */,
 				90535898260E50D500CAFB0D /* AppDelegate.swift in Sources */,
 				9053589A260E50D500CAFB0D /* SceneDelegate.swift in Sources */,
+				90C046202618852F00F92099 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
